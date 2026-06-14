@@ -36,3 +36,17 @@ int* intersection(int* nums1, int nums1Size, int* nums2, int nums2Size, int* ret
     *returnSize=returnsize;
     return crr;
 }
+/*c++版本
+class Solution {
+public:
+    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
+        unordered_set <int> res;
+        unordered_set <int> arr(nums2.begin(),nums2.end());
+        for(int num : nums1){
+            if(arr.find(num)!=arr.end()){
+                res.insert(num);
+            }
+        }
+        return vector<int>(res.begin(),res.end());
+    }
+};*/
