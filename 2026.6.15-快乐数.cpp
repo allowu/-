@@ -46,3 +46,29 @@ bool isHappy(int n) {
     }
     return false;
 }*/
+/*c++
+class Solution {
+public:
+    bool isHappy(int n) {
+        int sum=0;
+        unordered_set<int> arr;
+        while(1){
+            while(n){
+                sum+=(n%10)*(n%10);
+                n/=10;
+            }
+            if(sum==1){
+                return true;
+            }
+            if(arr.find(sum)!=arr.end()){
+                return false;
+            }
+            else{
+                arr.insert(sum);
+            }
+            n=sum;
+            sum=0;
+        }
+        return false;
+    }
+};*/
